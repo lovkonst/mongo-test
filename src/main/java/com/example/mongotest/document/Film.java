@@ -11,8 +11,9 @@ public class Film {
 
     private String name;
 
+    private Integer rating;
+
     public Film(String id, String name) {
-        //super();
         this.id = id;
         this.name = name;
     }
@@ -31,5 +32,13 @@ public class Film {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Integer getRating() {
+        return rating;
+    }
+
+    public void setRating(Integer rating) {
+        this.rating = rating;
     }
 }

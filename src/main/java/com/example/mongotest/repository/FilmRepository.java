@@ -1,12 +1,18 @@
 package com.example.mongotest.repository;
 
 import com.example.mongotest.document.Film;
-import org.springframework.data.mongodb.repository.MongoRepository;
-import org.springframework.data.mongodb.repository.Query;
 
-public interface FilmRepository extends MongoRepository<Film, String> {
+import java.util.List;
 
-    @Query("{name:'?0'}")
-    Film findByName(String name);
+public interface FilmRepository {
 
+    void create(Film film);
+
+    void updateRating(String id, Integer rating);
+
+    List<Film> findAll();
+
+    List<Film> findByName(String name);
+
+    void remove(String id);
 }
